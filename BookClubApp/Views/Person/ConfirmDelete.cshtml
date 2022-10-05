@@ -1,0 +1,9 @@
+﻿@model Person;
+@{
+    ViewData["Title"] = "ConfirmDelete";
+}
+
+<h1>Are you sure you would like to delete @Model.FirstName @Model.LastName</h1>
+<div>Deleting this member will also remove any presentations they have scheduled</div>
+<a href="/Person/Delete/@Model.id">Yes, delete.</a> <br/><br/>
+<a href="/Person">No, do not delete.</a>

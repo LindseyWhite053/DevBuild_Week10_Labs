@@ -1,0 +1,15 @@
+﻿@model Person;
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>@Model.FirstName's Details</h1>
+
+
+<a href="/Person/EditForm/@Model.id">Edit</a>
+<a href="/Person/ConfirmDelete/@Model.id">Delete</a>
+
+<div>Full Name: @Model.FirstName @Model.LastName</div>
+<div>Email: @Model.Email</div>
+
+

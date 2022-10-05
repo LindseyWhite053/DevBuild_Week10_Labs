@@ -1,0 +1,11 @@
+﻿@model Presentation;
+@{
+    ViewData["Title"] = "ConfirmDelete";
+}
+
+<h1>Confirm Deletion</h1>
+
+<h1>@Model.BookTitle presentation on @Model.PresentationDate.ToString("MM-dd-yy")</h1>
+
+<a href="/Presentation/Delete/@Model.id">Yes, continue deleting.</a> <br/><br/>
+<a href="/Presentation">No, do not delete.</a>

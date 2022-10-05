@@ -1,0 +1,28 @@
+﻿@model Presentation;
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Presentation Details</h1>
+
+<div>
+   Presentation Host: 
+   @foreach (Person pers in (List<Person>)ViewData["people"]){
+        if (pers.id == Model.PersonId)
+        {
+            <span>@pers.FirstName @pers.LastName</span>
+        }
+    }
+</div>
+<div>
+    Date: @Model.PresentationDate.ToString("MM-dd-yy")  
+</div>
+<div>
+    Book: @Model.BookTitle
+</div>
+<div>
+    Author: @Model.BookAuthor
+</div>
+<div>
+    Genre: @Model.Genre
+</div>

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "AddForm";
+}
+
+<h1>Add a Member</h1>
+
+<form method="post" action="/Person/Add">
+    <div>
+        First Name: <input type="text" name="FirstName" value="@ViewBag.first"/>
+            <span class="text-danger fw-bold">@ViewBag.FirstNameMsg</span>
+    </div>
+    <div>
+    Last Name: <input type="text" name="LastName"value="@ViewBag.last"/>
+        <span class="text-danger fw-bold">@ViewBag.LastNameMsg</span>
+    </div>
+    <div>
+        Email: <input type="email" name="Email" value="@ViewBag.email"/>
+            <span class="text-danger fw-bold">@ViewBag.EmailMsg</span>
+    </div>
+    <input type="submit" value="Add"/>
+</form>
